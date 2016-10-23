@@ -4,8 +4,10 @@ We hope you find exactly what you're looking for in a place to stay.
 
 <ul>
   {{#each model as |rental|}}
-    <li>{{rental.owner}}'s {{rental.type}} in {{rental.city}}</li>
+    {{rental-tile rental=rental destroyRental="destroyRental"}}
   {{/each}}
 </ul>
+
+{{new-rental saveRental2="saveRental3"}}
 
 <h2>{{#link-to 'about'}}About Us{{/link-to}} | {{#link-to 'contact'}}Contact Us{{/link-to}}</h2>
